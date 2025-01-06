@@ -139,7 +139,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 65deff810a18f6b428da119b4e8d1798, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.482
+  m_Volume: 0.312
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 757322486951725940, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 983949754574036668, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -517,6 +521,14 @@ PrefabInstance:
     - target: {fileID: 2471767187838161450, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554574882218352525, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554574882218352525, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2581473652498743520, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_Name
@@ -604,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6171809687861877736, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 5.178e-42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6171809687861877736, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -612,16 +624,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6171809687861877736, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 6e-44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6171809687861877736, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 6e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6404299897711127998, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_Range
       value: 49.03041
       objectReference: {fileID: 0}
+    - target: {fileID: 6521453938260851833, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c8377c8b2eb6cf428448331e95eb938, type: 3}
     - target: {fileID: 6741660777811606743, guid: 2579277c974e50e4d80458a4a6893951, type: 3}
       propertyPath: m_Name
       value: main build 002
