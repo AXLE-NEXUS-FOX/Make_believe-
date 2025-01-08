@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/menu/Infomation and Extra.unity
     guid: ef035aec0f215224ab863436c5630a05
+  - enabled: 1
+    path: Assets/scenes/visual experience/visual 1.unity
+    guid: 15febdcaddce17646bd6dfb43e83d2d3
   m_configObjects: {}
