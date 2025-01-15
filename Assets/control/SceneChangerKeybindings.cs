@@ -150,7 +150,7 @@ public class SceneChangerKeybindings : MonoBehaviour
                 ChangeToNextScene();
                 break;
             case "ExitGame":
-                Exit();
+                Application.Quit();
                 break;
             default:
                 Debug.LogWarning("No action found for: " + actionName);
