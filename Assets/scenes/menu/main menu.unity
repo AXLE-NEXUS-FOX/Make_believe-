@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.7819706, g: 0.33524734, b: 0.33524734, a: 1}
+  m_SubtractiveShadowColor: {r: 0.03137255, g: 0.13333334, b: 0.2901961, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: ed1387202b1349540a5d6464f0f27488, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -3720,6 +3720,7 @@ GameObject:
   - component: {fileID: 212260175854078010}
   - component: {fileID: 4534875828922774539}
   - component: {fileID: 402518478}
+  - component: {fileID: 7500669884242125379}
   m_Layer: 0
   m_Name: 'projecter '
   m_TagString: Untagged
@@ -3727,6 +3728,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7500669884242125379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500669884242125378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bad54a693b4804ca498ebcb0fe312a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7777866033676939126
 Transform:
   m_ObjectHideFlags: 0
@@ -4159,6 +4172,18 @@ PrefabInstance:
     - target: {fileID: 5413746315726710020, guid: 3a185725044013b48a05fe9a9a05be66, type: 3}
       propertyPath: m_margin.z
       value: 3.6973877
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765947192082203485, guid: 3a185725044013b48a05fe9a9a05be66, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765947192082203485, guid: 3a185725044013b48a05fe9a9a05be66, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844019587485397967, guid: 3a185725044013b48a05fe9a9a05be66, type: 3}
+      propertyPath: m_text
+      value: ' V-0.2.5X-RYU-IN-DEV-R9 PROTOTYPE'
       objectReference: {fileID: 0}
     - target: {fileID: 5844019587485397967, guid: 3a185725044013b48a05fe9a9a05be66, type: 3}
       propertyPath: m_fontAsset
