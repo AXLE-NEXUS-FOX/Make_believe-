@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SceneChangerKeybindings : MonoBehaviour
 {
     // --- Configuration ---
+    /*
     [Header("Keybindings")]
     [Tooltip("List of actions and their associated key/joystick bindings.")]
     public List<KeyActionPair> keybindings = new List<KeyActionPair>();
@@ -36,7 +37,8 @@ public class SceneChangerKeybindings : MonoBehaviour
             return $"{actionName}: Key: {keyCode}, Joystick: {joystickButton}";
         }
     }
-
+    */
+    /*
     void Start()
     {
         LoadKeybindings();
@@ -123,12 +125,12 @@ public class SceneChangerKeybindings : MonoBehaviour
             Debug.LogWarning("No scene to load specified in the Inspector.");
         }
     }
-
+    */
     public void Exit()
     {
         Application.Quit();
     }
-
+    /*
     private void ChangeToNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -172,4 +174,5 @@ public class SceneChangerKeybindings : MonoBehaviour
             Debug.Log(binding.ToString());
         }
     }
+    */
 }
