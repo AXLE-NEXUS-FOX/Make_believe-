@@ -81,6 +81,8 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+        public GameObject FootForRaycast;
+
         // cinemachine
        // private float _cinemachineTargetYaw;
        // private float _cinemachineTargetPitch;
@@ -184,15 +186,16 @@ namespace StarterAssets
         private void GroundedCheck()
         {
             // set sphere position, with offset
-            
+           
             Vector3 spherePosition = new Vector3(PlayerModel.transform.position.x, PlayerModel.transform.position.y - GroundedOffset,
                 PlayerModel.transform.position.z);
-            Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
-                QueryTriggerInteraction.Ignore);
-            //Physics.Raycast(PlayerModel.transform.position, Vector3.down, GroundedLine, GroundLayers
-            //Grounded = Physics.Raycast(PlayerModel.transform.position, Vector3.down, GroundedLine, GroundLayers);
-            //Debug.DrawRay(transform.position, Vector3.down, Color.green);
-            //Debug.DrawLine(PlayerModel.transform.position,, Color.green);
+            Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers);
+            
+           
+            //Physics.Raycast(FootForRaycast.transform.position, Vector3.down, GroundedLine, GroundLayers);
+            //Grounded = Physics.Raycast(transform.position, Vector3.down, GroundedLine, GroundLayers);
+            //Debug.DrawRay(transform.position,new Vector3(0, GroundedLine, 0), Color.yellow);
+            //Debug.DrawLine(PlayerModel.transform.position, PlayerModel.transform.position - new Vector3(0,GroundedLine,0) , Color.green);
 
             // update animator if using character
             if (_hasAnimator)
@@ -367,17 +370,18 @@ namespace StarterAssets
         }
 
         private void OnDrawGizmosSelected()
-        {
+        {/*
             Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
             Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
 
             if (Grounded) Gizmos.color = transparentGreen;
             else Gizmos.color = transparentRed;
-
+            /*
             // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
             Gizmos.DrawSphere(
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
+            */
         }
 
         private void OnFootstep(AnimationEvent animationEvent)

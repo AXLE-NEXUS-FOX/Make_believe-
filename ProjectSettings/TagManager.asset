@@ -10,16 +10,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - null
+  - 
   - Water
   - UI
   - backdrop
   - Trap
-  - 
+  - null
   - MainMenuButton
   - Ground
   - PlayerDeath
-  - 
+  - Player
   - 
   - 
   - 
