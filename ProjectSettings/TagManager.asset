@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trap
   - Ground
+  - JerryWay
   layers:
   - Default
   - TransparentFX
