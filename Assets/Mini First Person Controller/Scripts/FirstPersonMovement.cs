@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
@@ -10,6 +11,9 @@ public class FirstPersonMovement : MonoBehaviour
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
+    [Header("Collectables")]
+    public TextMeshProUGUI coinsText;
+    private int Coins = 0;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -21,7 +25,21 @@ public class FirstPersonMovement : MonoBehaviour
     {
         // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
+        coinsText.text = "Coins: " + Coins.ToString();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Collectable"))
+        {
+            Coins++;
+            coinsText.text = "Coins: " + Coins.ToString();
+            // Play Sound effect if you want
+            Destroy(other.gameObject);
+        }
+    }
+
+
 
     void FixedUpdate()
     {

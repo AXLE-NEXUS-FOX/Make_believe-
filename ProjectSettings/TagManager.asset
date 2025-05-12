@@ -7,6 +7,7 @@ TagManager:
   - Trap
   - Ground
   - JerryWay
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Ground
   - PlayerDeath
   - Player
-  - 
+  - Navmesh
   - 
   - 
   - 
