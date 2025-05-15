@@ -17,5 +17,7 @@ public class TakeSettingValue : MonoBehaviour
         firstPersonLookFromCam = gameObject.GetComponent<FirstPersonLook>();
         firstPersonLookFromCam.sensitivity = firstPersonLookFromSettings.sensitivity;
         firstPersonLookFromCam.sensitivitySlider = SensisitvitySlider;
+        firstPersonLookFromCam.sensitivitySlider.value = firstPersonLookFromSettings.sensitivity;
+        firstPersonLookFromCam.sensitivityText.text = "Sensitivity: " + firstPersonLookFromSettings.sensitivity.ToString("0.0");
     }
 }

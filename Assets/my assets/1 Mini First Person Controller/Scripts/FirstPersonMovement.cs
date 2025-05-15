@@ -42,7 +42,7 @@ public class FirstPersonMovement : MonoBehaviour
     }
 
 
-    void OpenSettingMenu(bool SettingsMenueBool)
+    public void OpenSettingMenu(bool SettingsMenueBool)
     {
         SettingsMenueBool = !SettingsMenueBool;
         isSettingsMenuOpen = SettingsMenueBool;

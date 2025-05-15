@@ -33,7 +33,12 @@ public class FirstPersonLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         sensitivitySlider.maxValue = 10;
         sensitivitySlider.minValue = 0.1f;
+        sensitivitySlider.value = sensitivity;
         sensitivityText.text = "Sensitivity: " + sensitivity.ToString();
+    }
+    private void OnGUI()
+    {
+        sensitivitySlider.value = sensitivity;
     }
 
     void Update()
