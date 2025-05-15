@@ -33,7 +33,7 @@ public class JerryMovemet : MonoBehaviour
     {
         Debug.Log("Jump");
         OldVelocity = agent.velocity;
-        Debug.Log("Velocity =" + OldVelocity);
+        //Debug.Log("Velocity =" + OldVelocity);
       
         agent.enabled = false; // Disable the NavMeshAgent to allow jumping
         rb.isKinematic = false; // Set Rigidbody to non-kinematic
@@ -67,7 +67,7 @@ public class JerryMovemet : MonoBehaviour
         if (UseRbVeloc)
         {
             rb.velocity = new Vector3(OldVelocity.x, rb.velocity.y, OldVelocity.z); // Preserve the x and z velocity
-            Debug.Log("Rigidbody velocity =" + rb.velocity);
+            //Debug.Log("Rigidbody velocity =" + rb.velocity);
 
         }
         else

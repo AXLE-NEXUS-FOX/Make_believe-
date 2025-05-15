@@ -1,12 +1,22 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using Unity.VisualScripting.Dependencies.NCalc;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class FirstPersonLook : MonoBehaviour
 {
+    [Header("First Person Look")]
+
     [SerializeField]
     Transform character;
-    public float sensitivity = 2;
-    public float smoothing = 1.5f;
+    public Slider sensitivitySlider;
+    public TextMeshProUGUI sensitivityText;
 
+    [Range(0, 10)]
+    public float sensitivity = 0.5f;
+    public float smoothing = 1.5f;
+    public float multiply = 1.5f;
+    
     Vector2 velocity;
     Vector2 frameVelocity;
 
@@ -21,6 +31,9 @@ public class FirstPersonLook : MonoBehaviour
     {
         // Lock the mouse cursor to the game screen.
         Cursor.lockState = CursorLockMode.Locked;
+        sensitivitySlider.maxValue = 10;
+        sensitivitySlider.minValue = 0.1f;
+        sensitivityText.text = "Sensitivity: " + sensitivity.ToString();
     }
 
     void Update()
@@ -38,5 +51,11 @@ public class FirstPersonLook : MonoBehaviour
         // Rotate camera up-down and controller left-right from velocity.
         transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
         character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
+    }
+
+    public void UpdateSensitivity()
+    {
+       sensitivity = sensitivitySlider.value;
+       sensitivityText.text = "Sensitivity: " + sensitivity.ToString("0.0");
     }
 }

@@ -14,6 +14,8 @@ public class FirstPersonMovement : MonoBehaviour
     [Header("Collectables")]
     public TextMeshProUGUI coinsText;
     private int Coins = 0;
+    public GameObject SettingsMenu;
+    private bool isSettingsMenuOpen = false;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -40,7 +42,26 @@ public class FirstPersonMovement : MonoBehaviour
     }
 
 
+    void OpenSettingMenu(bool SettingsMenueBool)
+    {
+        SettingsMenueBool = !SettingsMenueBool;
+        isSettingsMenuOpen = SettingsMenueBool;
+        Debug.Log("Settings Menu Opened: " + SettingsMenueBool);
+        if (SettingsMenueBool)
+        {
+        SettingsMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
+        }
+        else
+        {
+            SettingsMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+    }
     void FixedUpdate()
     {
         // Update IsRunning from input.
@@ -58,5 +79,13 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            OpenSettingMenu(isSettingsMenuOpen);
+        }
     }
 }
