@@ -16,8 +16,8 @@ namespace SlimUI.ModernMenu{
         public GameObject firstMenu;
         [Tooltip("The Menu for when the PLAY button is clicked")]
         public GameObject playMenu;
-        [Tooltip("The Menu for when the EXIT button is clicked")]
-        public GameObject exitMenu;
+		[Tooltip("The Menu for when the EXIT button is clicked")]
+		public GameObject exitMenu;
         [Tooltip("Optional 4th Menu")]
         public GameObject extrasMenu;
 
@@ -82,12 +82,28 @@ namespace SlimUI.ModernMenu{
 
 		void Start(){
 			CameraObject = transform.GetComponent<Animator>();
+			if(playMenu != null)
+			{
+                playMenu.SetActive(false);
+            }
+			if(exitMenu != null)
+			{
 
-			playMenu.SetActive(false);
-			exitMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			firstMenu.SetActive(true);
-			mainMenu.SetActive(true);
+                exitMenu.SetActive(false);
+			}
+            
+			if (extrasMenu != null)
+            {
+                extrasMenu.SetActive(false);
+            }
+			if(firstMenu != null)
+            {
+             firstMenu.SetActive(true);
+            }	
+			if(mainMenu != null)
+            {
+              mainMenu.SetActive(true);
+            }
 
 			SetThemeColors();
 		}

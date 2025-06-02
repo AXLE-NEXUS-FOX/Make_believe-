@@ -81,12 +81,16 @@ public class JerryMovemet : MonoBehaviour
                     currentWaypointIndex++;
 
                 }
-                else if (currentWaypointIndex >= waypoints.Length - 1)
+                else if (currentWaypointIndex >= waypoints.Length)
                 {
                     currentWaypointIndex = 0; // Loop back to the first waypoint
                                               //agent.destination = waypoints[currentWaypointIndex].transform.position;
                 }
+                if(currentWaypointIndex !<= waypoints.Length)
+                {
                 agent.destination = waypoints[currentWaypointIndex].transform.position;
+                   
+                }
 
 
             }
